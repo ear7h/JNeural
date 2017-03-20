@@ -15,7 +15,7 @@ public class NeuronNetwork {
     public float localMinProbability[];
     final float LOCAL_FACTOR = 0.05f;
     final float ERROR_THRESHOLD = 0.1f;
-    final float LEARN_RATE = 0.5f;
+    final float LEARN_RATE = 0.7f;
     final int NUM_OF_INPUTS;
     final int NUM_OF_OUTPUTS;
     final int NUM_OF_LAYERS;
@@ -61,10 +61,10 @@ public class NeuronNetwork {
 
                 this.localMinProbability[j] = ((this.latestError/this.ERROR_THRESHOLD) * i)/(i + iterations);
 
-                System.out.println("In: " + Arrays.toString(inputs[j]) + "\t out: " + Arrays.toString(this.result));
+                //System.out.println("In: " + Arrays.toString(inputs[j]) + "\t out: " + Arrays.toString(this.result));
                 
             }
-            System.out.print("\n");
+            //System.out.print("\n");
         }
 
     }

@@ -1,6 +1,7 @@
 package JNeural;
+
 /**
- * Created by julio on 3/16/17.
+ * Created by j on 4/21/17.
  */
 public class GetActivation {
     public static Activation sigmoid() {
@@ -19,8 +20,6 @@ public class GetActivation {
         };
         return sig;
     }
-
-    //TODO: fix this
     public static Activation ReLU () {
         Activation ReLU = new Activation() {
             @Override
@@ -44,6 +43,27 @@ public class GetActivation {
         return ReLU;
     }
 
+    public static Activation LReLU (float l) {
+        Activation ReLU = new Activation() {
+            @Override
+            public float function(float x) {
+                if (x < 0){
+                    return x * l;
+                } else {
+                    return x;
+                }
+            }
+
+            @Override
+            public float prime(float x) {
+                if (x < 0){
+                    return l;
+                } else {
+                    return 1;
+                }
+            }
+        };
+        return ReLU;
+    }
+
 }
-
-

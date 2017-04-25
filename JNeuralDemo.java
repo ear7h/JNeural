@@ -55,7 +55,7 @@ public class JNeuralDemo {
         n.train(t, 50000);
 
         //n.run() returns a FloatMatrix with the results
-        JNeural.Matrix.FloatMatrix r = n.run(t.getAnswers());
+        JNeural.Matrix.FloatMatrix r = n.run(t.getInputs());
 
         //the latest result can also be acquired with n.result
         System.out.println(n.result);

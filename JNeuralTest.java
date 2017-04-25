@@ -1,8 +1,5 @@
-import JNeural.GetActivation;
-import JNeural.LocalMin.LocalMinProbability;
-import JNeural.LocalMin.None;
-import JNeural.NeuralNetwork;
-import JNeural.TrainingSet;
+import JNeural.*;
+import JNeural.LocalMin.*;
 
 /**
  * Created by rio on 3/13/17.

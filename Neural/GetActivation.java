@@ -1,4 +1,4 @@
-package JNeural;
+package Neural;
 
 /**
  * Created by j on 4/21/17.

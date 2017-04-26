@@ -1,4 +1,4 @@
-package JNeural.Matrix;
+package Matrix;
 
 /*
 JNeural.Matrix class which uses a one dimensional array and contains some mathematical shortcuts

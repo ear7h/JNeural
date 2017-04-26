@@ -1,38 +1,26 @@
-import JNeural.*;
-import JNeural.LocalMin.*;
+package Neural;
+
+import LocalMin.*;
+import Matrix.*;
 
 /**
  * Created by rio on 3/13/17.
  */
 
-
-//this class tests the effectiveness of training
-public class JNeuralTest {
+public class JNeuralDemo {
     public static void main (String[] args){
-        int trains = 100;
-        int correct = 0;
 
-        float sum = 0;
-        for (int i = 0; i < trains; i++) {
-            float tac = trainAndCheck(0.1f);
-            sum += tac;
-            if ( tac < 0.1f) {
-                correct ++;
-            }
-        }
-
-        System.out.println("average error: " + (sum/trains));
-        System.out.println(correct + " correct trains, out of " + trains);
-    }
-
-    public static float trainAndCheck (float threshold){
+        //initializing the neural network requires and array where the first and last
+        //elements indicate inputs and outputs respectively
         NeuralNetwork n = new NeuralNetwork(new int[]{2, 4, 2, 1});
+
+        //n.setLearnRate() sets the learn rate, the default value is 0.5f
         n.setLearnRate(0.01f);
 
         /*
-        the Activation interface allows for the creation of custom activation functions.
+        the Neural.Activation interface allows for the creation of custom activation functions.
         the interface contains function and prime methods for calculations and back propagation
-        the GetActivation class provides a few prewriten activation functions
+        the Neural.GetActivation class provides a few prewriten activation functions
         */
 
         n.setActivationFunc(GetActivation.sigmoid());
@@ -67,16 +55,12 @@ public class JNeuralTest {
 
 
         n.train(t, 50000);
-        float sum = 0;
-        for (int i = 0; i < n.result.length; i++) {
-            float diff = n.result.arr[i] - t.getAnswers().arr[i];
-            sum += diff;
-            if (Float.isNaN(n.result.arr[0])){
-                return 1;
-            }
-        }
 
-        return (sum/n.result.length);
+        //n.run() returns a FloatMatrix with the results
+        FloatMatrix r = n.run(t.getInputs());
+
+        //the latest result can also be acquired with n.result
+        System.out.println(n.result);
     }
 
 }

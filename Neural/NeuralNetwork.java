@@ -1,8 +1,7 @@
-package JNeural;
+package Neural;
 
-
-import JNeural.LocalMin.*;
-import JNeural.Matrix.*;
+import LocalMin.*;
+import Matrix.*;
 
 public class NeuralNetwork {
     //all fields public for custom Eliminator classes

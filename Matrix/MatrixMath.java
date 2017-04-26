@@ -1,4 +1,4 @@
-package JNeural.Matrix;
+package Matrix;
 
 /*
 multithreaded array mathematics

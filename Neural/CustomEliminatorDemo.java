@@ -1,18 +1,18 @@
-package JNeural.LocalMin;
+package Neural;
 
-import JNeural.Matrix.FloatMatrix;
-import JNeural.NeuralNetwork;
+import LocalMin.Eliminator;
+import Matrix.FloatMatrix;
 
 /**
  * Created by j on 4/21/17.
  */
-public class LocalMinProbability implements Eliminator {
+public class CustomEliminatorDemo implements Eliminator {
 
     //variables to escape local min
     private float FACTOR;
     private float ERROR_THRESHOLD;
 
-    public LocalMinProbability(float threshold, float factor){
+    public CustomEliminatorDemo(float threshold, float factor){
         this.ERROR_THRESHOLD = threshold;
         this.FACTOR = factor;
     }

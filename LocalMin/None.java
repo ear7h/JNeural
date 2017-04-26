@@ -1,7 +1,7 @@
-package JNeural.LocalMin;
+package LocalMin;
 
-import JNeural.NeuralNetwork;
-import JNeural.Matrix.FloatMatrix;
+import Neural.NeuralNetwork;
+import Matrix.FloatMatrix;
 
 /**
  * Created by j on 4/23/17.

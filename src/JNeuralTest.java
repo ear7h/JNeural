@@ -1,9 +1,9 @@
-import LocalMin.LocalMinProbability;
-import LocalMin.None;
-import Neural.CustomEliminatorDemo;
-import Neural.GetActivation;
-import Neural.NeuralNetwork;
-import Neural.TrainingSet;
+import JNeural.CustomEliminatorDemo;
+import JNeural.GetActivation;
+import JNeural.NeuralNetwork;
+import JNeural.TrainingSet;
+import JNeural.localminelimination.LocalMinProbability;
+import JNeural.localminelimination.None;
 
 /**
  * Created by rio on 3/13/17.
@@ -34,9 +34,9 @@ public class JNeuralTest {
         n.setLearnRate(0.01f);
 
         /*
-        the Neural.Activation interface allows for the creation of custom activation functions.
+        the Activation interface allows for the creation of custom activation functions.
         the interface contains function and prime methods for calculations and back propagation
-        the Neural.GetActivation class provides a few prewriten activation functions
+        the GetActivation class provides a few prewriten activation functions
         */
 
         n.setActivationFunc(GetActivation.sigmoid());

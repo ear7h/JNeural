@@ -6,7 +6,7 @@ import JNeural.localminelimination.LocalMinProbability;
 import JNeural.localminelimination.None;
 
 /**
- * Created by rio on 3/13/17.
+ * Created by j on 3/13/17.
  */
 
 

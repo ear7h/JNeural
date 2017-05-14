@@ -7,7 +7,7 @@ import JNeural.localminelimination.None;
 import Matrix.FloatMatrix;
 
 /**
- * Created by rio on 3/13/17.
+ * Created by j on 3/13/17.
  */
 
 public class JNeuralDemo {

@@ -1,7 +1,7 @@
 package JNeural;
 
 import JNeural.localminelimination.Eliminator;
-import JNeural.matrix.FloatMatrix;
+import Matrix.FloatMatrix;
 
 /**
  * Created by j on 4/21/17.

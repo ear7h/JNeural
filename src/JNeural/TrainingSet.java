@@ -1,6 +1,6 @@
 package JNeural;
 
-import JNeural.matrix.FloatMatrix;
+import Matrix.FloatMatrix;
 
 /**
  * Created by j on 4/22/17.

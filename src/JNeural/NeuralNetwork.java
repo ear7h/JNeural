@@ -3,8 +3,8 @@ package JNeural;
 
 import JNeural.localminelimination.Eliminator;
 import JNeural.localminelimination.None;
-import JNeural.matrix.FloatMatrix;
-import JNeural.matrix.MatrixMath;
+import Matrix.FloatMatrix;
+import Matrix.MatrixMath;
 
 public class NeuralNetwork {
     //all fields public for custom Eliminator classes

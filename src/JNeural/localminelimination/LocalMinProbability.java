@@ -1,6 +1,6 @@
 package JNeural.localminelimination;
 
-import JNeural.matrix.FloatMatrix;
+import Matrix.FloatMatrix;
 import JNeural.NeuralNetwork;
 
 /**

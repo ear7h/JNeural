@@ -55,7 +55,7 @@ public class NeuralNetwork {
            #rows = neurons in previous layer
            #columns = specified neurons in this layer
 
-        the dot product of adjacent layers yields a matrix which can be multiplied against next layer
+        the dot product of adjacent layers yields a Matrix which can be multiplied against next layer
         */
         for(int i = 1; i < NUM_OF_LAYERS; i++){
             this.layers[i] = new FloatMatrix(layerProfile[i - 1], layerProfile[i]);
@@ -113,7 +113,7 @@ public class NeuralNetwork {
         return run(inM);
     }
 
-    //native run method, takes in float matrix
+    //native run method, takes in float Matrix
     public FloatMatrix run (FloatMatrix input){
 
         //ensure size compatibility

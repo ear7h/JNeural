@@ -1,4 +1,4 @@
-package JNeural.matrix;
+package Matrix;
 
 /*
 multithreaded array mathematics
@@ -30,15 +30,15 @@ public class MatrixMath {
 
     //dot product method
     public static FloatMatrix dot (FloatMatrix a1, FloatMatrix a2){
-        //check for matrix size compatibility
+        //check for Matrix size compatibility
         if (a1.columns != a2.rows) {
-            throw new IllegalArgumentException("Columns of matrix a1 must be equal to rows of matrix a2");
+            throw new IllegalArgumentException("Columns of Matrix a1 must be equal to rows of Matrix a2");
         }
-        //this method will only be efficient if the first matrix has more columns than the computer has POOL_SIZE.
+        //this method will only be efficient if the first Matrix has more columns than the computer has POOL_SIZE.
         if (a1.rows < POOL_SIZE){
             return a1.dot(a2);
         }
-        //create the resulting matrix
+        //create the resulting Matrix
         FloatMatrix res = new FloatMatrix(a1.rows, a2.columns);
         //set number of rows needed in for loop
         int m1 = a1.rows;
@@ -58,7 +58,7 @@ public class MatrixMath {
         }
 
         the DotTask class executes part of the dot product loop
-            for each row in the first matrix, a task will be added to the pool;
+            for each row in the first Matrix, a task will be added to the pool;
             for each completed task, an item will be added to the future linked list
          */
 

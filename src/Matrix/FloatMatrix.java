@@ -1,4 +1,4 @@
-package JNeural.matrix;
+package Matrix;
 
 /*
 JNeural.Matrix class which uses a one dimensional array and contains some mathematical shortcuts
@@ -76,7 +76,7 @@ public class FloatMatrix {
     //dot product
     public FloatMatrix dot (FloatMatrix a) {
         if(this.columns != a.rows){
-            throw new IllegalArgumentException("Incompatible matrix sizes for dot product");
+            throw new IllegalArgumentException("Incompatible Matrix sizes for dot product");
         }
         FloatMatrix r = new FloatMatrix(this.rows, a.columns);
         for (int i =0; i < this.rows; i++){
@@ -161,7 +161,7 @@ public class FloatMatrix {
         return r;
     }
 
-    //flip dimensions of matrix
+    //flip dimensions of Matrix
     public FloatMatrix T () {
         FloatMatrix res = new FloatMatrix(this.columns, this.rows);
         for(int c = 0; c < this.columns; c++){

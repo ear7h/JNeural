@@ -18,9 +18,9 @@ public class JNeuralTest {
 
         float sum = 0;
         for (int i = 0; i < trains; i++) {
-            float tac = trainAndCheck(0.1f);
+            float tac = trainAndCheck();
             sum += tac;
-            if ( tac < 0.1f) {
+            if ( tac < 0.01f) {
                 correct ++;
             }
         }
@@ -29,9 +29,9 @@ public class JNeuralTest {
         System.out.println(correct + " correct trains, out of " + trains);
     }
 
-    public static float trainAndCheck (float threshold){
+    public static float trainAndCheck (){
         NeuralNetwork n = new NeuralNetwork(new int[]{2, 4, 2, 1});
-        n.setLearnRate(0.01f);
+        n.setLearnRate(0.1f);
 
         /*
         the Activation interface allows for the creation of custom activation functions.

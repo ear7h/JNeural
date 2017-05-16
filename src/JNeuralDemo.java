@@ -18,7 +18,7 @@ public class JNeuralDemo {
         NeuralNetwork n = new NeuralNetwork(new int[]{2, 4, 2, 1});
 
         //n.setLearnRate() sets the learn rate, the default value is 0.5f
-        n.setLearnRate(0.01f);
+        n.setLearnRate(0.1f);
 
         /*
         the Activation interface allows for the creation of custom activation functions.

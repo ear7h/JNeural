@@ -9,8 +9,8 @@ public class TrainingSet {
     private FloatMatrix inputs;
     private FloatMatrix answers;
     private int length; //number of rows for both matrices
-    private int NUM_OF_INPUTS; //number of columns for input matrix
-    private int NUM_OF_OUTPUTS; //number of columns for output matrix
+    private int NUM_OF_INPUTS; //number of columns for input Matrix
+    private int NUM_OF_OUTPUTS; //number of columns for output Matrix
 
     public TrainingSet (NeuralNetwork n){
         NUM_OF_INPUTS = n.getNUM_OF_INPUTS();

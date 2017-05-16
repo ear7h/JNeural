@@ -9,7 +9,7 @@ import JNeural.NeuralNetwork;
 import JNeural.TrainingSet;
 import JNeural.localminelimination.LocalMinProbability;
 import JNeural.localminelimination.None;
-import JNeural.matrix.FloatMatrix;
+import JNeural.Matrix.FloatMatrix;
 
 /**
  * Created by j on 3/13/17.
